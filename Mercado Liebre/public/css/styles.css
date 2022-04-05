@@ -1,0 +1,316 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+/* -------------------------------------- HEADER -------------------------------------- */
+
+div.top-header{
+    padding: 5%;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header nav{
+    font-size: 12px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+/* ------------------------------------ MAIN ------------------------------------ */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+main section.products {
+    display: flex;
+    width: 80%;
+}
+
+main section article img{
+    width: 100%;
+}
+
+/*MICRODESAFIO 1.2*/
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+}
+
+.price{
+    font-size: 18px;
+    flex: 30%;
+}
+/*se puede usar with*/
+.discount{
+flex: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3, .description{
+    color: #666;
+}
+
+/*MICRODESAFIO 1.1*/   
+main section article div .description{
+    display: none;
+    margin-top: 20px;
+    transition: display 450ms;
+}
+main section article:hover div .description {   
+    display: block;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section div article div i{
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        transition: transform 450ms;
+}
+
+/*MICRODESAFIO 1.3*/
+main section div article:hover div i{
+    transform: rotate(-90deg);
+}
+
+
+
+/* -------------------------------------- FORMULARIO -------------------------------------- */
+
+.create-form{
+    padding: 20px 15px;
+    
+}
+
+.control-formulario{
+   margin-bottom: 15px;
+}
+.control-formulario label{
+    margin-bottom: 5px;
+    font-size: italic;
+    font-weight: bold;
+    display: block;
+ }
+.control{
+    width: 30%;
+    padding: 8px;
+}
+
+.perfil-del-usuario{
+    display: flex;
+    flex-direction: row;
+}
+
+.vendedor{
+    position: relative;
+    left: 50px;
+}
+
+.boton-formulario{
+    background-color: blue;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.boton-formulario a{
+    text-decoration: none; 
+  } 
+.boton-formulario a:visited{
+    color: white;
+  }
+
+/*MICRODESAFIO 2.1*/  
+button.boton-formulario:hover{
+    background-color:#0022AA ;
+}
+
+
+/* -------------------------------------- FOOTER -------------------------------------- */
+
+footer{
+margin:10px;
+background-color: white;
+}
+
+footer div div.iconos{
+font-size: 28px;
+padding-bottom: 10px;
+text-align: center;
+color:#3483fa}
+
+.iconos:hover {
+color:#39b54a;
+}
+
+footer div div.texto-titulares{
+font-size: 20px; 
+text-align: center;
+font-weight: bold;
+color:rgb(128, 128, 128)
+}
+
+footer div p.texto-descripciones{
+text-align: center;
+color: rgb(128, 128, 128)
+}
+
+
+
+/* -------------------------------------- PROYECTO ADAPTATIVO -------------------------------------- */
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        width: 43%;    
+    }
+
+    main section .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+    main section article {
+        width:41%
+    }
+
+}
+
+@media (min-width: 769px){
+    
+    main section .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+    
+    main section article{
+        width: 22%;        
+        }
+ 
+    main section article .description{
+        display: block;
+    }
+
+    .elementos-footer{
+        display: flex;
+        justify-content: space-around;
+        margin-top:80px ;
+        margin-bottom: 80px;}
+}

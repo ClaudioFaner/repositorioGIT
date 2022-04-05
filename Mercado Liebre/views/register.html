@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script>
+            function validar(){
+            if(document.getElementById("password").value == document.getElementById("password-verify").value){
+                document.getElementById("password-verify").style.backgroundColor="green"
+                document.getElementById("password-error-message").innerHTML="Las contraseñas coinciden"
+        }
+        else{
+            document.getElementById("password-verify").style.backgroundColor="pink"
+            document.getElementById("password-error-message").innerHTML="Las contraseñas no coinciden"
+            }
+        }
+        </script>
+
+    </head>
+
+<!-- ---------------------------- HEADER ---------------------------- -->
+
+    <body>
+        <header>
+            <div class="top-header">
+                <div class="logo"> 
+                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                </div>
+                <div class="form" action="#" method="GET">
+                    <div class="input">Buscar productos, marcas y más</div>
+                    <div class="submit"><i class="fa fa-search"></i></div>
+                </div>
+                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+        </header>
+
+
+<!-- ---------------------------- FORMULARIO ---------------------------- -->
+
+        <main>
+
+        <form action="/crear-registro" method="post" class="create-form">
+
+        <div class="control-formulario">
+            <label for=""></label>
+            <input type="text" name="Nombre y Apellido" required minlenght="2" class="control" placeholder="Nombre y Apellido">
+
+        </div>
+        <div class="control-formulario">
+            <label for=""></label>
+            <input type="text" name="usuari@" required minlenght="2" class="control" placeholder="Nombre de usuari@">
+            
+        </div>
+        <div class="control-formulario">
+            <label for="">Fecha de nacimiento</label>
+                <input type="date" name="Fecha de nacimiento" placeholder="Fecha de nacimiento">
+
+        </div>
+        <div class="control-formulario">
+            <label for=""></label>
+            <input type="text" name="Domicilio" class="control" placeholder="Domicilio"> 
+        </div>
+        <div class="control-formulario" > 
+               
+            <h4>Perfil del usuario</h4><br>
+
+        <div class="perfil-del-usuario">            
+
+            <div>
+            <label for="Comprador">Comprador         
+            <input type="radio"  name="Perfil del usuario" value="Comprador"></label><br>
+            </div>
+            
+            <div class="vendedor">
+            <label for="Vendedor">Vendedor
+            <input type="radio"  name="Perfil del usuario" value="Vendedor"></label><br>
+            </div>
+
+        </div>     
+
+        </div>
+        
+            <h4>Categorias de interes</h4><br>
+        
+            <div class="control-formulario">   
+        
+            <div class="checkbox">
+            <input type="checkbox"  name="Categorias de interes" id="Electro"  value="Electro"><label for="Electro">Electro </label><br>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox"  name="Categorias de interes" value="Moda"><label for="Moda">Moda</label><br>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox"  name="Categorias de interes" value="Hogar"><label for="Hogar">Hogar</label><br>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox"  name="Categorias de interes" value="Juguetería"><label for="Juguetería">Juguetería</label><br>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox"  name="Categorias de interes" value="Vida sana"><label for="Vida sana">Vida sana</label><br>
+            </div>
+            </div>
+        
+            <div class="control-formulario">
+            <label for="">Foto de usuario</label>
+                <input type="file" name="Foto de usuario" multiple>
+        </div>
+
+        <div class="control-formulario">
+            <label for="">Password</label>
+            <input type="password" name="Password" required minlength="8" placeholder="Escribe tu contrasena" class="control">
+        </div>
+        
+        <div class="control-formulario">
+            <label for="">Confirmar Password</label>
+            <input type="password" name="Confirmar Password" required minlength="8" placeholder="Repite tu contrasena" class="control">
+
+        </div>
+
+        <button class="boton-formulario"> <a href="/"> Enviar</a></button>
+       
+        <button type="reset" class="boton-formulario" > Borrar </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    </body>
+
+    </html>
