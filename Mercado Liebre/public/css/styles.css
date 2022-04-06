@@ -47,6 +47,10 @@ header ul li a{
     color: #000;
 }
 
+header .form{
+    width: 50%;
+}
+
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
@@ -123,18 +127,17 @@ main section article div.main-article{
     padding: 15px;
     display: flex;  
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: baseline;
     position: relative;
 }
 
 .price{
     font-size: 18px;
-    flex: 30%;
+    flex: 18%;
 }
 /*se puede usar with*/
 .discount{
-flex: 70%;
+flex: 55%;
 }
 
 .discount,
@@ -162,7 +165,7 @@ main section article i,
     color: #39b54a;
 }
 
-main section div article div i{
+main section div article div i{   /*segun enunciado*/
         display: block;
         font-size: 16px;
         padding: 5px;
