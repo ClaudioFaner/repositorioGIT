@@ -22,133 +22,133 @@
         </script>
 
     </head>
+    <body>
 
 <!-- ---------------------------- HEADER ---------------------------- -->
 
-    <body>
-        <header>
-            <div class="top-header">
-                <div class="logo"> 
-                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-                </div>
-                <div class="form" action="#" method="GET">
-                    <div class="input">Buscar productos, marcas y más</div>
-                    <div class="submit"><i class="fa fa-search"></i></div>
-                </div>
-                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
-                </ul>
-            </nav>
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-        </header>
+<header class="main-header">
+            
+    <div class="top-header">
+        <div class="logo"> 
+            <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+        </div>
+        <div class="form" action="#" method="GET">
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+        <p class="copy-header">
+            <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+    </div>
+    
+    <nav class="main-navbar">
+        <ul class="nav-left">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="user-nav-list">
+            <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+            <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+        </ul>
+    </nav>
 
+    <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+    </div>
+</header>
+
+<section class="banner">
+    <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+</section>
+
+        
 
 <!-- ---------------------------- FORMULARIO ---------------------------- -->
 
         <main>
 
-        <form action="/crear-registro" method="post" class="create-form">
-
-        <div class="control-formulario">
-            <label for=""></label>
-            <input type="text" name="Nombre y Apellido" required minlenght="2" class="control" placeholder="Nombre y Apellido">
-
-        </div>
-        <div class="control-formulario">
-            <label for=""></label>
-            <input type="text" name="usuari@" required minlenght="2" class="control" placeholder="Nombre de usuari@">
-            
-        </div>
-        <div class="control-formulario">
-            <label for="">Fecha de nacimiento</label>
-                <input type="date" name="Fecha de nacimiento" placeholder="Fecha de nacimiento">
-
-        </div>
-        <div class="control-formulario">
-            <label for=""></label>
-            <input type="text" name="Domicilio" class="control" placeholder="Domicilio"> 
-        </div>
-        <div class="control-formulario" > 
-               
-            <h4>Perfil del usuario</h4><br>
-
-        <div class="perfil-del-usuario">            
-
-            <div>
-            <label for="Comprador">Comprador         
-            <input type="radio"  name="Perfil del usuario" value="Comprador"></label><br>
-            </div>
-            
-            <div class="vendedor">
-            <label for="Vendedor">Vendedor
-            <input type="radio"  name="Perfil del usuario" value="Vendedor"></label><br>
-            </div>
-
-        </div>     
-
-        </div>
+            <div class="form-container">
+                <form action="registered" method="GET" class="form-register">
+                    <input type="text" placeholder="Nombre y apellido" required>
+                    <input type="text" placeholder="Nombre de usuario" required>
+                    <input type="email" placeholder="e-mail" required minlength="6" maxlength="64">
+                    <h4>Fecha de nacimiento</h4>
+                    <input type="date" required>
+                    <input type="text" placeholder="Domicilio" required>
+                    <h4>Perfil de usuario</h4>
+                    <div>
+                        <label for="comprador"><input type="radio" id="comprador" name="tipo-de-usuario" value="c"
+                                checked>Comprador</label>
+                        <label for="vendedor"><input type="radio" id="vendedor" name="tipo-de-usuario" value="v"
+                                checked>Vendedor</label>
+                    </div>
+                    <h4>Intereses</h4>
+                    <label for="electro"><input type="checkbox" id="electro" value="electro">Electro</label>
+                    <label for="moda"><input type="checkbox" id="moda" value="moda">Moda</label>
+                    <label for="hogar"><input type="checkbox" id="hogar" value="hogar">Hogar</label>
+                    <label for="jugueteria"><input type="checkbox" id="jugueteria" value="jugueteria">Juguetería</label>
+                    <label for="vida-sana"><input type="checkbox" id="vida-sana" value="vida-sana">Vida sana</label>
+                    <label for="avatar">
+                        <h4></h4>Elegí una foto de perfil
+                    </label>
+                    <input type="file" accept="image/png, image/jpeg, image/jpg" value="Foto de pergil" id="avatar">
+                    <input type="password" id="pass" placeholder="Escribe tu contraseña" required minlength="8">
+                    <input type="password" id="passVerify" placeholder="Confirma tu contraseña" required onkeyup="validar()">
+                    <div>
+                        <span id="password-error-message"></span>
+                    </div>
+                    <div class="div-submit">
+                        <input type="submit" value="Enviar datos">
+                        <input type="reset" value="Limpiar datos">
+                    </div>
+                </form>
         
-            <h4>Categorias de interes</h4><br>
-        
-            <div class="control-formulario">   
-        
-            <div class="checkbox">
-            <input type="checkbox"  name="Categorias de interes" id="Electro"  value="Electro"><label for="Electro">Electro </label><br>
             </div>
-            <div class="checkbox">
-            <input type="checkbox"  name="Categorias de interes" value="Moda"><label for="Moda">Moda</label><br>
-            </div>
-            <div class="checkbox">
-            <input type="checkbox"  name="Categorias de interes" value="Hogar"><label for="Hogar">Hogar</label><br>
-            </div>
-            <div class="checkbox">
-            <input type="checkbox"  name="Categorias de interes" value="Juguetería"><label for="Juguetería">Juguetería</label><br>
-            </div>
-            <div class="checkbox">
-            <input type="checkbox"  name="Categorias de interes" value="Vida sana"><label for="Vida sana">Vida sana</label><br>
-            </div>
-            </div>
-        
-            <div class="control-formulario">
-            <label for="">Foto de usuario</label>
-                <input type="file" name="Foto de usuario" multiple>
-        </div>
 
-        <div class="control-formulario">
-            <label for="">Password</label>
-            <input type="password" name="Password" required minlength="8" placeholder="Escribe tu contrasena" class="control">
-        </div>
-        
-        <div class="control-formulario">
-            <label for="">Confirmar Password</label>
-            <input type="password" name="Confirmar Password" required minlength="8" placeholder="Repite tu contrasena" class="control">
-
-        </div>
-
-        <button class="boton-formulario"> <a href="/"> Enviar</a></button>
-       
-        <button type="reset" class="boton-formulario" > Borrar </button>
-
-        </form>
 
     </main>
 
-    <footer>
+<!-- ---------------------------- FOOTER ---------------------------- -->
 
-    </footer>
+
+    <footer>
+            <section>
+                <div class="footer-icon"> <i class="fas fa-credit-card"></i> </div>
+                <div>
+                    <h4>Pagá con tarjeta o en efectivo</h4>
+                </div>
+                <div>
+                    <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y
+                        siempre es seguro!</p>
+                </div>
+            </section>
+            <section>
+                <div class="footer-icon"> <i class="fas fa-gift"></i> </div>
+                <div>
+                    <h4>Envío gratis desde $ 2.500</h4>
+                </div>
+                <div>
+                    <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un
+                        beneficio de Mercado Puntos.</p>
+                </div>
+            </section>
+            <section>
+                <div class="footer-icon"><i class="fas fa-user-shield"></i></div>
+                <div>
+                    <h4>Seguridad, de principio a fin</h4>
+                </div>
+                <div>
+                    <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre
+                        protegid@.</p>
+                </div>
+            </section>
+            <div>
+                <h6>Copyright © 1999-2020 MercadoLiebre S.R.L.</h6>
+            </div>
+    
+        </footer>
 
     </body>
 

@@ -10,7 +10,7 @@ body{
 }
 
 h3{
-    font-size: 24px;
+    font-size: 24px;                      /**/
 }
 
 p{
@@ -20,22 +20,30 @@ p{
 /* -------------------------------------- HEADER -------------------------------------- */
 
 div.top-header{
-    padding: 5%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 header{
     background-color: #EAC926;
+    padding: 2px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 header div.logo{
     width: 50%;
-}
-
-header div.logo{
     padding: 10px;
 }
+
 header nav{
     font-size: 12px;
+    display: none;
 }
 
 header ul li{
@@ -48,23 +56,50 @@ header ul li a{
 }
 
 header .form{
+    display:flex;
     width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: end;
+}
+
+header div .submit{
+    display:flex;
+    width: 20%;
+    flex-wrap: wrap;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 3px 0;   
+}
+
+header div .input{
+    display:flex;
+    width: 80%;
+    flex-wrap: wrap;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: solid 1px #ebebeb;
+    padding: 3px 0 3px 5px;
 }
 
 header .form .input{
     background-color: #FFF;
-    border: 1px solid #000;
     outline: none;
     color: #666;
-    padding: 2px;
-}
+    }
 
 header .form .submit{
     background-color: #FFF;
-    border: 1px solid #000;
     color: #666;
-    width: 10%;
+    width: 12%;
+    align-items:center;
+    text-align: center;
 }
+
+header .form .submit i{
+    text-align: center;
+ }
 
 header div.top-header p{
     width: 100%;
@@ -74,6 +109,8 @@ header div.top-header p{
 
 div.burger-menu{
     text-align: center;
+    padding: 10px;
+    display: block;
 }
 
 div.burger-menu i{
@@ -133,11 +170,11 @@ main section article div.main-article{
 
 .price{
     font-size: 18px;
-    flex: 18%;
+    flex: 30%;
 }
 /*se puede usar with*/
 .discount{
-flex: 55%;
+flex: 70%;
 }
 
 .discount,
@@ -177,7 +214,7 @@ main section div article div i{   /*segun enunciado*/
         position: absolute;
         right: 20px;
         top: -15px;
-        transition: transform 450ms;
+        transition: transform 450ms;     /**/
 }
 
 /*MICRODESAFIO 1.3*/
@@ -187,133 +224,397 @@ main section div article:hover div i{
 
 
 
-/* -------------------------------------- FORMULARIO -------------------------------------- */
+/* -------------------------------------- FORMULARIOS -------------------------------------- */
 
-.create-form{
-    padding: 20px 15px;
-    
-}
-
-.control-formulario{
-   margin-bottom: 15px;
-}
-.control-formulario label{
-    margin-bottom: 5px;
-    font-size: italic;
-    font-weight: bold;
-    display: block;
- }
-.control{
-    width: 30%;
-    padding: 8px;
-}
-
-.perfil-del-usuario{
+.login-container {
+    margin: auto;
     display: flex;
-    flex-direction: row;
+    text-align: center;
+    margin-top: 250px;
+    justify-content: center;
+    max-width: 350px;
 }
 
-.vendedor{
-    position: relative;
-    left: 50px;
+
+.login-container form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    max-width: 90%;
 }
 
-.boton-formulario{
-    background-color: blue;
-    color: #FFF;
+form .user-name-login, form .password, form .login-button-container {
+    margin: 10px;
+    width: 350px;
+    height: 35px;;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+form .user-name-login input, form .password input {
+    width: 80%;
+    border: none;
+    padding-left: 15px;
+}
+
+ form .login-button {
+    background-color: #3583fa;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+form .login-button a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 240px;
+}
+
+.form-register [type="submit"], .form-register [type="reset"] {
+    background-color: #3583fa;
+    margin: 10px;
+    color: #ebebeb;
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 5px;
-    position: relative;
+    width: 40%;
+    height: 30px;
+    border:none;
     cursor: pointer;
 }
 
-.boton-formulario a{
-    text-decoration: none; 
-  } 
-.boton-formulario a:visited{
-    color: white;
-  }
+.form-register {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 40px;
+}
 
-/*MICRODESAFIO 2.1*/  
-button.boton-formulario:hover{
-    background-color:#0022AA ;
+.form-register * {
+    margin: 5px;
+}
+
+.form-register [type="text"], .form-register [type="date"], .form-register [type="password"], .form-register [type="email"] {
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    height: 30px;
+    padding: 4px;
+}
+
+.div-submit {
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-align: right;
 }
 
 
 /* -------------------------------------- FOOTER -------------------------------------- */
 
-footer{
-margin:10px;
-background-color: white;
+footer section div.footer-icon {
+    color: #0044AA;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+footer section div h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }
 
-footer div div.iconos{
-font-size: 28px;
-padding-bottom: 10px;
-text-align: center;
-color:#3483fa}
-
-.iconos:hover {
-color:#39b54a;
+footer section div p {
+    margin: 0;
+    padding: 0;
 }
 
-footer div div.texto-titulares{
-font-size: 20px; 
-text-align: center;
-font-weight: bold;
-color:rgb(128, 128, 128)
-}
-
-footer div p.texto-descripciones{
-text-align: center;
-color: rgb(128, 128, 128)
+footer section {
+    text-align: center;
+    padding: 10px;
+    color: #666;
 }
 
 
 
 /* -------------------------------------- PROYECTO ADAPTATIVO -------------------------------------- */
 
-@media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
-
-    main section article{
-        width: 43%;    
-    }
-
-    main section .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+@media (min-width: 361px) and (max-width: 769px) {
+        .description {
+            display: block;
         }
-
-    main section article {
-        width:41%
+        header div.top.header {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        header div.logo{
+            display: flex;
+            width: 150px;
+        }
+    
+        header div.form{
+            display: flex;
+            width: 30%;
+        }
+        header nav{
+            display:flex;
+            justify-content: space-between;
+        }
+        nav .nav-left {
+            display:flex;
+            justify-content: flex-start;
+            padding: 10px;
+            width: 50%;
+        }
+    
+        nav .user-nav-list {
+            display:flex;
+            justify-content: flex-end;
+            padding: 10px;
+            width: 50%;
+        }
+        header ul li {
+            list-style-type: none;
+            padding: 5px;
+        }
+        
+        header ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+    
+        header nav {
+            display:flex;
+            justify-content: space-between;
+        }
+    
+        div.burger-menu {
+            display:none;
+        }
+    
+        main section article {
+            box-shadow: 0 0 10px rgb(100,100,100);
+            flex: 40%;
+            margin: 10px;
+        }
+        main section article .description{
+            display: block;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }   
+        .form-register {
+            width: 50%;
+        }
+    
+        .login-container {
+            width: 80%;
+           margin-top: 200px;
+           max-width: 600px;
+        }
+        form .user-name-login input, form .password input {
+            width: 100%;
+        }
+        form .login-button {
+            width: 100%;
+        }
+        section.banner {
+            margin-top: 150px; 
+        }
+        
     }
 
-}
 
 @media (min-width: 769px){
     
-    main section .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        }
-    
-    main section article{
-        width: 22%;        
-        }
- 
-    main section article .description{
-        display: block;
-    }
+.description {
+    display: none;
+}
+header div.top-header {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+}
 
-    .elementos-footer{
-        display: flex;
-        justify-content: space-around;
-        margin-top:80px ;
-        margin-bottom: 80px;}
+header .copy-header {
+    max-width: 350px;
+    text-align: right; 
+}
+
+header div.logo{
+    display: flex;
+    width: 150px;
+}
+
+header div.form {
+    display: flex;
+    width: 30%;
+}
+header nav {
+    display:flex;
+    justify-content: space-between;
+}
+
+nav .nav-left {
+    display:flex;
+    justify-content: flex-start;
+    padding: 10px;
+    width: 50%;
+}
+
+nav .user-nav-list {
+    display:flex;
+    justify-content: flex-end;
+    padding: 10px;
+    width: 50%;
+}
+
+header ul li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+div.burger-menu{
+    display: none;
+}
+
+main section .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main section article {
+    flex: 22%;
+    margin: 10px;
+}
+
+main section article:hover {
+    box-shadow: 0 0 10px rgb(100,100,100);
+}
+
+main section article:hover .description {
+    display: block;
+}
+
+main section .products .main-article i:hover {
+    transform: rotate(-90deg);
+    transition-duration: 450ms;
+}
+
+.login-container form div.login-button-container .login-button:hover {
+    background-color: #39b54a;
+}
+
+/*
+footer section .footer-icon i:hover {
+    color: #39b54a;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 20px;
+}
+footer section {
+    width: 30%;
+}
+footer div {
+    flex-direction: row;
+    width: 90%;
+    padding: 10px;
+}
+footer div p {
+    text-align: center;
+    font-size: 16px;
+}
+
+*/
+
+.form-register {
+    width: 50%;
+}
+header {
+    width: 100%;
+    margin:auto;
+}
+header div.top-header, header .main-navbar {
+    margin: auto;
+    flex-wrap: nowrap;
+}
+section.banner, .login-container {
+    margin-top: 125px; 
+}
+form .user-name-login, form .password, form .login-button-container {
+    margin: 10px;
+    max-width: 650px;
+    height: 35px;;
+    display: flex;
+    justify-content: center;
+}
+.login-container { 
+    max-width: 750px;;
+}
+
+footer section .footer-icon i:hover {
+    color: #EAC926;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 20px;
+}
+footer section {
+    width: 30%;
+}
+footer div {
+    flex-direction: row;
+    width: 90%;
+    padding: 10px;
+}
+footer div p {
+    text-align: center;
+    font-size: 16px;
+}
+
 }
