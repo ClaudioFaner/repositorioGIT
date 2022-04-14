@@ -10,7 +10,7 @@ body{
 }
 
 h3{
-    font-size: 24px;                      /**/
+    font-size: 24px;
 }
 
 p{
@@ -257,7 +257,6 @@ form .user-name-login, form .password, form .login-button-container {
     justify-content: center;
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 form .user-name-login input, form .password input {
@@ -270,11 +269,10 @@ form .user-name-login input, form .password input {
     background-color: #3583fa;
     cursor: pointer;
     border-radius: 4px;
-    border: none;
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 40%;
 }
 
 
@@ -297,8 +295,6 @@ form .login-button a {
     margin: 10px;
     color: #ebebeb;
     border-radius: 5px;
-    width: 40%;
-    height: 30px;
     border:none;
     cursor: pointer;
 }
@@ -323,13 +319,19 @@ form .login-button a {
     padding: 4px;
 }
 
-.div-submit {
+.form-buttons{
+    width: 100%;
+    display: flex;
+}
+
+/*.div-submit {
     justify-content: end;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 350px;
+    height: auto;
     text-align: right;
-}
+}*/
 
 
 /* -------------------------------------- FOOTER -------------------------------------- */
